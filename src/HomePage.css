@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(3, 3, 46);
+    color: #fff;
+}
+
+.logo{
+  font-size: x-large;
+  padding-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+}
+
+.nav_body ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.nav_body ul li{
+    padding-right: 20px;
+}
+
+.signout button{
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signout{
+    margin-right: 30px;
+}
+
+.hotels{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(3, 3, 46);
+}
+
+.hotels_body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20%;
+  color: #fff;
+}
+
+.hotels_img img{
+  width: 85%;
+  height: auto;
+}
+
+.restaurants{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(22, 22, 58, 0.983);
+}
+
+.flights{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(33, 33, 106, 0.983);
+}
+
+.TripPlanner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(13, 13, 43, 0.983);
+}
+
+.Weather{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(21, 21, 43, 0.983);
+}
+
+.Blog{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(6, 6, 60, 0.983);
+}
+
+.Living{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(1, 1, 71, 0.983);
+}
+
+.TravelAgency{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 31, 0.983);
+}
+
+/* Add animation CSS for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add transition styles for the active navigation option */
+.nav_body ul li.active {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+
+  .nav_body ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .nav_body ul li {
+    padding: 10px;
+  }
+
+  .signout {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .hotels_body {
+    padding-left: 10px;
+  }
+
+  .hotels_img img {
+    width: 100%;
+  }
+}
+
