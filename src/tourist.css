@@ -1,0 +1,68 @@
+.open-trip-map-search {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .result-container {
+    margin-top: 20px;
+  }
+  
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .nearby-places {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nearby-place-item {
+    background-color: #e0f7fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .nearby-place-item:nth-child(odd) {
+    background-color: #b2ebf2;
+  }
+  
+  .nearby-place-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .nearby-place-address {
+    color: #555;
+  }
+  

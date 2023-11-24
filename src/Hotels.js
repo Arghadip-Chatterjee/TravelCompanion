@@ -112,6 +112,7 @@ const MyComponent = () => {
         <br />
         <label>
           Arrival Date:
+          <br/>
           <DatePicker
             selected={departureDate}
             onChange={handleDepartureDateChange}
@@ -128,21 +129,21 @@ const MyComponent = () => {
           />
         </label>
         <br />
-        <button type="submit">Search</button>
+        <button className='form-button' type="submit">Search</button>
       </form>
       {/* {responseData && (
         <pre>{JSON.stringify(responseData, null, 2)}</pre>
       )} */}
 
       {responseData && responseData.result ? (
-        <div>
+        <div className='response'>
           {responseData.result.map((hotel, index) => (
             <div key={index}>
               <h3>Hotel Name: {hotel.hotel_name}</h3>
               <p>Address: {hotel.address}</p>
               <p>Currency Code: {hotel.currencycode}</p>
               <a href={hotel.url} target="_blank" rel="noopener noreferrer">
-                <button>Book Now</button>
+                <button className='book-button'>Book Now</button>
               </a>
               <hr/>
             </div>

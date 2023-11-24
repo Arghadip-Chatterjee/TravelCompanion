@@ -1,0 +1,41 @@
+/* style5.css */
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-us-content {
+    text-align: center;
+  }
+  
+  .team-member-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin:auto;
+    align-items: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Add more styles as needed */
+  

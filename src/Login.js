@@ -43,9 +43,9 @@ function Login() {
                         <li>To See Living Prospects</li>
                     </ul>
                 </div>
-                <div className="button">
+                {/* <div className="button"> */}
                     <button onClick={handleGoogleSignIn}> Sign In to Google</button>
-                </div>
+                {/* </div> */}
             </div>
             <div className="right-side">
                 <img src={travel3} alt="Travel" />

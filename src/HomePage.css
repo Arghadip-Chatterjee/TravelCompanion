@@ -1,58 +1,87 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(3, 3, 46);
-    color: #fff;
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(3, 3, 46);
+  color: #fff;
+  width: 100%;
 }
 
-.logo{
+.logo {
   font-size: x-large;
   padding-left: 20px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 800;
 }
 
-.nav_body ul{
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    justify-content: space-around;
+.logo h2 {
+  color: #fff;
 }
 
-.nav_body ul li{
-    padding-right: 20px;
+.nav_body ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.signout button{
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.nav_body ul li {
+  padding-right: 20px;
 }
 
-.signout{
-    margin-right: 30px;
+.nav_body ul li a {
+  color: white;
 }
 
-.hotels{
+.signout button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button {
+  /* padding: 0.5rem 1rem; */
+  margin-top: 1rem;
+  /* background-color: #007bff; */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+  width: 40%;
+  height: 30%;
+}
+
+.signout {
+  margin-right: 30px;
+  display: flex;
+}
+
+.sign-out{
+  margin-top: 20px;
+}
+
+.hotels {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(3, 3, 46);
 }
 
-.hotels_body{
+.hotels_body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,54 +89,61 @@
   color: #fff;
 }
 
-.hotels_img img{
+.hotels_img img {
   width: 85%;
   height: auto;
 }
 
-.restaurants{
+.restaurants {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(22, 22, 58, 0.983);
 }
 
-.flights{
+.flights {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(33, 33, 106, 0.983);
 }
 
-.TripPlanner{
+.TripPlanner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(13, 13, 43, 0.983);
 }
 
-.Weather{
+.Weather {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(21, 21, 43, 0.983);
 }
 
-.Blog{
+.Blog {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(6, 6, 60, 0.983);
 }
 
-.Living{
+.Living {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgba(1, 1, 71, 0.983);
 }
 
-.TravelAgency{
+.TravelAgency {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 31, 0.983);
+}
+
+.Travel {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,6 +158,19 @@ html {
 /* Add transition styles for the active navigation option */
 .nav_body ul li.active {
   transition: background-color 0.3s ease-in-out;
+}
+
+.aboutus {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 17px;
 }
 
 /* Responsive Styles */
@@ -159,5 +208,33 @@ html {
   .hotels_img img {
     width: 100%;
   }
-}
 
+  .Travel button{
+    width: 103px;
+  }
+
+  .TravelAgency button{
+    width: 103px;
+  }
+
+  .Living button{
+    width: 103px;
+  }
+
+  .hotels button{
+    width: 103px;
+  }
+
+  .restaurants button{
+    width: 113px;
+  }
+
+  .button, .signout{
+    margin-bottom: 20px;
+  }
+
+  .signout{
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}

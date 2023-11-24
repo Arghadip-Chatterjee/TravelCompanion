@@ -12,6 +12,8 @@ import HomePage from './HomePage';
 import TravelBlogs from './blogs';
 import BlogPost from './blogs';
 import TravelAgencies from './TravelAgencies';
+import OpenTripMapSearch from './tourist';
+import AboutUsPage from './TeamMembers';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path='/living' element={<Living/>}/>
           <Route path='/homepage' element={<HomePage/>}/>
           <Route path='/travelagencies' element={<TravelAgencies/>}/>
+          <Route path='/tourist' element={<OpenTripMapSearch/>}/>
+          <Route path='/aboutus' element={<AboutUsPage/>}/>
         </Routes>
       </div>
     </Router>

@@ -27,10 +27,6 @@
   }
   
   .button {
-    margin-top: 1rem;
-  }
-  
-  .button button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
@@ -40,6 +36,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    /* width: 40%; */
   }
   
   .button button:hover {
@@ -51,6 +48,7 @@
     height: auto;
     border-radius: 8px;
     box-shadow: 2px 2px 4px rgba(245, 241, 241, 0.983);
+    margin-top: 20px;
   }
   
   .body ul {

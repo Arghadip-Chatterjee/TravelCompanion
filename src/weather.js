@@ -72,7 +72,20 @@ const WeatherComponent = () => {
       {currentWeather && (
         <div className="weather-info">
           <h2>Current Weather:</h2>
-          <pre>{JSON.stringify(currentWeather, null, 2)}</pre>
+          <div>
+            <p>Summary: {currentWeather.current.summary}</p>
+            <p>Temperature: {currentWeather.current.temperature}°C</p>
+            <p>Feels Like: {currentWeather.current.feels_like}°C</p>
+            <p>Humidity: {currentWeather.current.humidity}%</p>
+            <p>Wind Speed: {currentWeather.current.wind.speed} km/h</p>
+            <p>Wind Direction: {currentWeather.current.wind.dir}</p>
+            <p>Cloud Cover: {currentWeather.current.cloud_cover}%</p>
+            <p>Pressure: {currentWeather.current.pressure} hPa</p>
+            <p>Visibility: {currentWeather.current.visibility} km</p>
+            <p>Latitude: {currentWeather.lat}</p>
+            <p>Longitude: {currentWeather.lon}</p>
+            {/* Add more information as needed */}
+          </div>
         </div>
       )}
     </div>

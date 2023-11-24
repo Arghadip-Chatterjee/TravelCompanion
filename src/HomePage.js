@@ -12,6 +12,7 @@ import weather2 from './weather2.png';
 import blog2 from './blog2.png';
 import living2 from './living2.png';
 import TravelAgency2 from './TravelAgency2.png';
+import tourist_attraction from './tourist_attraction.png';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -31,36 +32,44 @@ function HomePage() {
     navigate(`#${sectionId}`);
   };
 
-  const handleHotels=()=>{
+  const handleHotels = () => {
     navigate('/hotels');
   }
 
-  const handleRestaurants=()=>{
+  const handleRestaurants = () => {
     navigate('/restaurants');
   }
 
-  const handleFlights=()=>{
+  const handleFlights = () => {
     navigate('/flights')
   }
 
-  const handlePlan=()=>{
+  const handlePlan = () => {
     navigate('/trip_planner')
   }
 
-  const handleWeather=()=>{
+  const handleWeather = () => {
     navigate('/weather')
   }
 
-  const handleBlog=()=>{
+  const handleBlog = () => {
     navigate('/travel_blogs')
   }
 
-  const handleLiving=()=>{
+  const handleLiving = () => {
     navigate('/living')
   }
 
-  const handleagencies=()=>{
+  const handleagencies = () => {
     navigate('/travelagencies')
+  }
+
+  const handletourist = () => {
+    navigate('/tourist')
+  }
+
+  const aboutus = () => {
+    navigate('/aboutus')
   }
 
   return (
@@ -76,19 +85,19 @@ function HomePage() {
               className={activeSection === 'hotels' ? 'active' : ''}
               onClick={() => handleNavClick('hotels')}
             >
-              <a href="#hotels">Hotels</a>
+              <a href="#hotels">Book Hotels</a>
             </li>
             <li
               className={activeSection === 'restaurants' ? 'active' : ''}
               onClick={() => handleNavClick('restaurants')}
             >
-              <a href="#restaurants">Restaurants</a>
+              <a href="#restaurants">Find Restaurants</a>
             </li>
             <li
               className={activeSection === 'flights' ? 'active' : ''}
               onClick={() => handleNavClick('flights')}
             >
-              <a href="#flights">Flights</a>
+              <a href="#flights">Book Flights</a>
             </li>
             <li
               className={activeSection === 'TripPlanner' ? 'active' : ''}
@@ -100,7 +109,7 @@ function HomePage() {
               className={activeSection === 'Weather' ? 'active' : ''}
               onClick={() => handleNavClick('Weather')}
             >
-              <a href="#Weather">Weather</a>
+              <a href="#Weather">Weather Forecast</a>
             </li>
             <li
               className={activeSection === 'blog' ? 'active' : ''}
@@ -120,20 +129,30 @@ function HomePage() {
             >
               <a href="#agency">Travel Agencies</a>
             </li>
+
+            <li
+              className={activeSection === 'tourist' ? 'active' : ''}
+              onClick={() => handleNavClick('tourist')}
+            >
+              <a href="#tourist">Tourist Attraction</a>
+            </li>
           </ul>
         </div>
 
         <div className="signout">
-          <button onClick={handleSignOut}>Sign Out</button>
+          <button onClick={aboutus} className='aboutus'>
+            About Us
+          </button>
+          <button className='sign-out' onClick={handleSignOut}>Sign Out</button>
         </div>
       </nav>
 
       <div className="hotels" id="hotels">
         <div className="hotels_body">
           <div className="heading">Finding the perfect escape at this hotel</div>
-          <div className="button">
-            <button onClick={handleHotels}>Hotels</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handleHotels}>Book Hotels</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
@@ -144,9 +163,9 @@ function HomePage() {
       <div className="restaurants" id="restaurants">
         <div className="hotels_body">
           <div className="heading">“The business of feeding people is the most amazing business in the world.”</div>
-          <div className="button">
-            <button onClick={handleRestaurants}>Restaurants</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handleRestaurants}>Find Restaurants</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
@@ -157,9 +176,9 @@ function HomePage() {
       <div className="flights" id="flights">
         <div className="hotels_body">
           <div className="heading">Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly</div>
-          <div className="button">
-            <button onClick={handleFlights}>Flights</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handleFlights}>Book Flights</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
@@ -170,9 +189,9 @@ function HomePage() {
       <div className="TripPlanner" id="TripPlanner">
         <div className="hotels_body">
           <div className="heading">Embark on Your Ultimate Journey: The Perfect Trip Planner for Unforgettable Adventures</div>
-          <div className="button">
-            <button onClick={handlePlan}>Trip Planner</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handlePlan}>Trip Planner</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
@@ -183,9 +202,9 @@ function HomePage() {
       <div className="Weather" id="Weather">
         <div className="hotels_body">
           <div className="heading">Everybody talks about the weather, but nobody does anything about it</div>
-          <div className="button">
-            <button onClick={handleWeather}>Weather</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handleWeather}>Weather Forecast</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
@@ -196,9 +215,9 @@ function HomePage() {
       <div className="Blog" id="blog">
         <div className="hotels_body">
           <div className="heading">Insights Unleashed: Explore, Engage, and Empower with Our Captivating Blogging Platform</div>
-          <div className="button">
-            <button onClick={handleBlog}>Blog</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handleBlog}>Travel Blog</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
@@ -209,9 +228,9 @@ function HomePage() {
       <div className="Living" id="living">
         <div className="hotels_body">
           <div className="heading">Discover the Finest Living Prospects: Unlock Your Dream Lifestyle Today!</div>
-          <div className="button">
-            <button onClick={handleLiving}>Living Prospects</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handleLiving}>Living Prospects</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
@@ -222,13 +241,26 @@ function HomePage() {
       <div className="TravelAgency" id="agency">
         <div className="hotels_body">
           <div className="heading">Live your life by a compass, not a clock</div>
-          <div className="button">
-            <button onClick={handleagencies}>Travel Agencies</button>
-          </div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handleagencies}>Travel Agencies</button>
+          {/* </div> */}
         </div>
 
         <div className="hotels_img">
           <img src={TravelAgency2} alt="Travel Agencies" />
+        </div>
+      </div>
+
+      <div className="Travel" id="tourist">
+        <div className="hotels_body">
+          <div className="heading">"Discover Your Wanderlust: Unveiling the Spectacular Wonders of Our World"</div>
+          {/* <div className="button"> */}
+          <button className='button' onClick={handletourist}>Tourist Attraction</button>
+          {/* </div> */}
+        </div>
+
+        <div className="hotels_img">
+          <img src={tourist_attraction} alt="Travel Agencies" />
         </div>
       </div>
     </div>

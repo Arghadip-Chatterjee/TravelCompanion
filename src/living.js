@@ -71,10 +71,37 @@ const Living = () => {
           Submit
         </button>
       </form>
+
+      {response && (
+        <div className="response">
+          <h2>Exchange Rates:</h2>
+          <ul>
+            {Object.entries(response.exchange_rate).map(([currency, rate]) => (
+              <li key={currency}>
+                <strong>{currency}:</strong> {rate}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      
       {response && (
         <div className="response">
           <h2>Response:</h2>
-          <pre>{JSON.stringify(response, null, 2)}</pre>
+          {response.prices && response.prices.map((price, index) => (
+            <div key={index}>
+              <p><strong>Item Name:</strong> {price.item_name}</p>
+              <p><strong>Category Name:</strong> {price.category_name}</p>
+              <p><strong>Min:</strong> {price.min}</p>
+              <p><strong>Avg:</strong> {price.avg}</p>
+              <p><strong>Max:</strong> {price.max}</p>
+              <p><strong>Measure:</strong> {price.measure}</p>
+              <p><strong>Currency Code:</strong> {price.currency_code}</p>
+              <hr />
+            </div>
+          ))}
+
+          
         </div>
       )}
       {error && (
